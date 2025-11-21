@@ -52,5 +52,5 @@ cannot find docker client executable
 
 ## Задача 6.1
 ## Ответ
-![Иллюстрация к проекту]()
+![Иллюстрация к проекту](https://github.com/bitsl40/virtd-homeworks1/blob/main/dockercp.png)
 

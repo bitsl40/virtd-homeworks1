@@ -27,13 +27,14 @@
 ![Иллюстрация к проекту](https://github.com/bitsl40/virtd-homeworks1/blob/main/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%203-3-sql.png)
 
 ## Задача 4
-1. Запустите в Yandex Cloud ВМ (вам хватит 2 Гб Ram).
-2. Подключитесь к Вм по ssh и установите docker.
-3. Напишите bash-скрипт, который скачает ваш fork-репозиторий в каталог /opt и запустит проект целиком.
-4. Зайдите на сайт проверки http подключений, например(или аналогичный): ```https://check-host.net/check-http``` и запустите проверку вашего сервиса ```http://<внешний_IP-адрес_вашей_ВМ>:8090```. Таким образом трафик будет направлен в ingress-proxy. Трафик должен пройти через цепочки: Пользователь → Internet → Nginx → HAProxy → FastAPI(запись в БД) → HAProxy → Nginx → Internet → Пользователь
-5. (Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения ```docker ps -a```
-6. Повторите SQL-запрос на сервере и приложите скриншот и ссылку на fork.
-
+## Ответ
+[Cсылка на fork](https://github.com/bitsl40/shvirtd-example-python)
+При попытке выполнить SQL-запрос в контейнере запущенном на облачной ВМ, получаю ошибку при подключении к mysql: docker exec -ti mysql_db mysql -uroot -pYtR\qeWq4321
+mysql: [Warning] Using a password on the command line interface can be insecure.
+ERROR 1045 (28000): Access denied for user ‘root’@‘localhost’ (using password: YES)
+При этом сервис запущен и работает.
+Тоже самое на локальной машине отрабатывает без проблем. На облачной ВМ проект работает, сервисы отрабатывают, но при подключении к БД в контейнере возникает данная ошибка.
+## MYSQL_ROOT_HOST="%" - в compose файле использовал
 ## Задача 5 (*)
 1. Напишите и задеплойте на вашу облачную ВМ bash скрипт, который произведет резервное копирование БД mysql в директорию "/opt/backup" с помощью запуска в сети "backend" контейнера из образа ```schnitzler/mysqldump``` при помощи ```docker run ...``` команды. Подсказка: "документация образа."
 2. Протестируйте ручной запуск
@@ -41,17 +42,15 @@
 4. Предоставьте скрипт, cron-task и скриншот с несколькими резервными копиями в "/opt/backup"
 
 ## Задача 6
-Скачайте docker образ ```hashicorp/terraform:latest``` и скопируйте бинарный файл ```/bin/terraform``` на свою локальную машину, используя dive и docker save.
-Предоставьте скриншоты  действий .
+При запуске команды dive hashicorp/terraform
+Ошибка:
+Image Source: docker://hashicorp/terraform
+Fetching image... (this can take a while for large images)
+Handler not available locally. Trying to pull 'hashicorp/terraform'...
+cannot fetch image
+cannot find docker client executable
 
 ## Задача 6.1
-Добейтесь аналогичного результата, используя docker cp.  
-Предоставьте скриншоты  действий .
+## Ответ
+![Иллюстрация к проекту]()
 
-## Задача 6.2 (**)
-Предложите способ извлечь файл из контейнера, используя только команду docker build и любой Dockerfile.  
-Предоставьте скриншоты  действий .
-
-## Задача 7 (***)
-Запустите ваше python-приложение с помощью runC, не используя docker или containerd.  
-Предоставьте скриншоты  действий .

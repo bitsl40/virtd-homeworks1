@@ -29,12 +29,7 @@
 ## Задача 4
 ## Ответ
 [Cсылка на fork](https://github.com/bitsl40/shvirtd-example-python)
-При попытке выполнить SQL-запрос в контейнере запущенном на облачной ВМ, получаю ошибку при подключении к mysql: docker exec -ti mysql_db mysql -uroot -pYtR\qeWq4321
-mysql: [Warning] Using a password on the command line interface can be insecure.
-ERROR 1045 (28000): Access denied for user ‘root’@‘localhost’ (using password: YES)
-При этом сервис запущен и работает.
-Тоже самое на локальной машине отрабатывает без проблем. На облачной ВМ проект работает, сервисы отрабатывают, но при подключении к БД в контейнере возникает данная ошибка.
-## MYSQL_ROOT_HOST="%" - в compose файле использовал
+![Иллюстрация к проекту](https://github.com/bitsl40/virtd-homeworks1/blob/main/%D0%B2%D0%BCsql.png)
 
 
 ## Задача 6

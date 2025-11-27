@@ -33,13 +33,10 @@
 
 
 ## Задача 6
-При запуске команды dive hashicorp/terraform
-Ошибка:
-Image Source: docker://hashicorp/terraform
-Fetching image... (this can take a while for large images)
-Handler not available locally. Trying to pull 'hashicorp/terraform'...
-cannot fetch image
-cannot find docker client executable
+## Ответ
+![Иллюстрация к проекту](https://github.com/bitsl40/virtd-homeworks1/blob/main/screnn1.png)
+![Иллюстрация к проекту](https://github.com/bitsl40/virtd-homeworks1/blob/main/%D1%81%D0%BA%D1%80%D0%B8%D0%BD2.png)
+![Иллюстрация к проекту](https://github.com/bitsl40/virtd-homeworks1/blob/main/%D1%81%D0%BA%D1%80%D0%B8%D0%BD3.png)
 
 ## Задача 6.1
 ## Ответ

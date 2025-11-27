@@ -35,6 +35,7 @@
 ## Задача 6
 ## Ответ
 ![Иллюстрация к проекту](https://github.com/bitsl40/virtd-homeworks1/blob/main/screnn1.png)
+![Иллюстрация к проекту](https://github.com/bitsl40/virtd-homeworks1/blob/main/screen2.png)
 ![Иллюстрация к проекту](https://github.com/bitsl40/virtd-homeworks1/blob/main/%D1%81%D0%BA%D1%80%D0%B8%D0%BD2.png)
 ![Иллюстрация к проекту](https://github.com/bitsl40/virtd-homeworks1/blob/main/%D1%81%D0%BA%D1%80%D0%B8%D0%BD3.png)
 
